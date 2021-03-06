@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { btnVariants } from "../framerVariants/btn";
 
 const Home = () => {
   return (
@@ -12,13 +13,7 @@ const Home = () => {
     >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <motion.button
-          whileHover={{
-            scale: 1.1,
-            textShadow: "0px 0px 8px #fff",
-            boxShadow: "0px 0px 8px #fff",
-          }}
-        >
+        <motion.button variants={btnVariants} whileHover="hover">
           Create Your Pizza
         </motion.button>
       </Link>
